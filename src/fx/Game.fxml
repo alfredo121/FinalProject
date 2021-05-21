@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="735.0" style="-fx-background-color: #004673;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.GameController">
+   <children>
+      <Button fx:id="btnAddGame" layoutX="116.0" layoutY="461.0" mnemonicParsing="false" onAction="#addGame" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #007AC2;" text="Add Game" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Label layoutX="259.0" layoutY="128.0" text="Hard Disk Space" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="259.0" layoutY="182.0" text="Price" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="15.0" layoutY="184.0" text="Company" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label fx:id="lblName" layoutX="15.0" layoutY="130.0" prefHeight="17.0" prefWidth="70.0" text="Name" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <TextField fx:id="txtName" layoutX="15.0" layoutY="153.0" prefHeight="25.0" prefWidth="175.0" />
+      <TextField fx:id="txtCompany" layoutX="15.0" layoutY="201.0" prefHeight="25.0" prefWidth="219.0" />
+      <TextField fx:id="txtHardDiskSpace" layoutX="259.0" layoutY="151.0" prefHeight="25.0" prefWidth="181.0" />
+      <TextField fx:id="txtPrice" layoutX="259.0" layoutY="199.0" prefHeight="25.0" prefWidth="181.0" />
+      <TableView fx:id="tblGame" layoutX="15.0" layoutY="234.0" onMouseClicked="#select" prefHeight="220.0" prefWidth="702.0" style="-fx-background-color: #004673;">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="135.0" text="Name" />
+          <TableColumn fx:id="colCompany" prefWidth="104.0" text="Company" />
+            <TableColumn fx:id="colHardDiskSpace" prefWidth="104.0" text="Hard Disk Space" />
+            <TableColumn fx:id="colPrice" prefWidth="106.0" text="Price" />
+            <TableColumn fx:id="colPlatform" prefWidth="117.0" text="Platform" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnDelete" layoutX="314.0" layoutY="461.0" mnemonicParsing="false" onAction="#deleteGame" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #007AC2;" text="Delete Game" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnModify" layoutX="511.0" layoutY="461.0" mnemonicParsing="false" onAction="#modifyGame" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #007AC2;" text="Modify Game" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <ComboBox fx:id="cmbPlatform" layoutX="453.0" layoutY="151.0" prefHeight="25.0" prefWidth="190.0" promptText="Choose a platform">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></ComboBox>
+      <Label layoutX="453.0" layoutY="128.0" text="Platform" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="149.0" layoutY="23.0" prefHeight="97.0" prefWidth="462.0" text="MY VIDEOGAMES" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Comic Sans MS" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="453.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logotipo-de-xbox.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="46.0" layoutX="499.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logotipo-de-wii.png" />
+         </image></ImageView>
+      <ImageView fitHeight="33.0" fitWidth="45.0" layoutX="546.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/control-de-xbox-para-uno.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="587.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/control-de-juego-con-joystick.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="165.0" fitWidth="213.0" layoutX="248.0" layoutY="266.0" opacity="0.08" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Daco_1312177.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="624.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/ps-logo-de-juegos.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="135.0" fitWidth="139.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Daco_4165429.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="233.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Daco_41652429.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="420.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/faceSmile.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="118.0" fitWidth="125.0" layoutX="588.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/ANGRYBIRD.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="628.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/pikachu.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnSearch" layoutX="199.0" layoutY="150.0" mnemonicParsing="false" onAction="#search" prefHeight="26.0" prefWidth="33.0" />
+      <Button fx:id="btnRefresh" layoutX="651.0" layoutY="149.0" mnemonicParsing="false" onAction="#refresh" prefHeight="39.0" prefWidth="58.0" style="-fx-background-color: #007AC2;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

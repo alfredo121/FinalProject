@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="541.0" prefWidth="744.0" style="-fx-background-color: #004673;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.BoardGameController">
+   <children>
+      <Button fx:id="btnAdd" layoutX="16.0" layoutY="486.0" mnemonicParsing="false" onAction="#addBoardGame" prefHeight="35.0" prefWidth="133.0" style="-fx-background-color: #007AC2;" text="Add Board Game" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnDelete" layoutX="231.0" layoutY="486.0" mnemonicParsing="false" onAction="#deleteBoardGame" prefHeight="35.0" prefWidth="149.0" style="-fx-background-color: #007AC2;" text="Delete Board Game" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnModify" layoutX="436.0" layoutY="486.0" mnemonicParsing="false" onAction="#modifyBoardGame" prefHeight="35.0" prefWidth="149.0" style="-fx-background-color: #007AC2;" text="Modify Board Game" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Label layoutX="231.0" layoutY="148.0" text="Company" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="18.0" layoutY="146.0" text="Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <TableView fx:id="tblBoardGame" layoutX="17.0" layoutY="250.0" onMouseClicked="#select" prefHeight="221.0" prefWidth="567.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="95.0" text="Name" />
+          <TableColumn fx:id="colCompany" prefWidth="109.0" text="Company" />
+            <TableColumn fx:id="colPlayers" prefWidth="108.0" text="Players" />
+            <TableColumn fx:id="colPrice" prefWidth="119.0" text="Price" />
+            <TableColumn fx:id="colAverageAge" prefWidth="135.0" text="Average Age" />
+        </columns>
+      </TableView>
+      <Label layoutX="422.0" layoutY="148.0" text="Average ages" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="231.0" layoutY="199.0" text="Price" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label fx:id="txtPlayer" layoutX="18.0" layoutY="197.0" text="Players" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Button fx:id="btnSearch" layoutX="163.0" layoutY="164.0" mnemonicParsing="false" onAction="#search" prefHeight="19.0" prefWidth="38.0" />
+      <TextField fx:id="txtPrice" layoutX="231.0" layoutY="220.0" />
+      <TextField fx:id="txtCompany" layoutX="231.0" layoutY="170.0" />
+      <TextField fx:id="txtPlayers" layoutX="18.0" layoutY="218.0" prefHeight="25.0" prefWidth="133.0" />
+      <TextField fx:id="txtName" layoutX="18.0" layoutY="168.0" prefHeight="25.0" prefWidth="133.0" />
+      <Label layoutX="150.0" layoutY="58.0" text="MY BOARD GAMES" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Comic Sans MS" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="305.0" fitWidth="139.0" layoutX="594.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Daco_4382303.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="97.0" fitWidth="96.0" layoutX="605.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Daco_4265637.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="83.0" fitWidth="96.0" layoutX="46.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Daco_4265637.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbAges" layoutX="422.0" layoutY="171.0" prefHeight="26.0" prefWidth="161.0" promptText="Select age" />
+      <Button fx:id="btnRefresh" layoutX="422.0" layoutY="205.0" mnemonicParsing="false" onAction="#refresh" prefHeight="35.0" prefWidth="58.0" style="-fx-background-color: #007AC2;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

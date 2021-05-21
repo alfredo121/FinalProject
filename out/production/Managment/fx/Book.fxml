@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="564.0" prefWidth="774.0" style="-fx-background-color: #004673;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.BookController">
+   <children>
+      <Button fx:id="btnAdd" layoutX="65.0" layoutY="519.0" mnemonicParsing="false" onAction="#addBook" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #007AC2;" text="Add Book" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnDelete" layoutX="256.0" layoutY="519.0" mnemonicParsing="false" onAction="#deleteBook" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #007AC2;" text="Delete Book" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnModify" layoutX="447.0" layoutY="519.0" mnemonicParsing="false" onAction="#modifyBook" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #007AC2;" text="Modify Book" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <TableView fx:id="tblBook" layoutX="23.0" layoutY="266.0" onMouseClicked="#select" prefHeight="246.0" prefWidth="570.0" style="-fx-background-color: #004673;">
+        <columns>
+          <TableColumn fx:id="colTitle" prefWidth="108.0" text="Title" />
+          <TableColumn fx:id="colAuthor" prefWidth="84.0" text="Author" />
+            <TableColumn fx:id="colPrice" prefWidth="63.0" text="Price" />
+            <TableColumn fx:id="colNPages" prefWidth="81.0" text="Nº Pages" />
+            <TableColumn fx:id="colEditorial" prefWidth="99.0" text="Editorial" />
+            <TableColumn fx:id="colYear" prefWidth="134.0" text="Year of Publication" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtTitle" layoutX="40.0" layoutY="173.0" />
+      <TextField fx:id="txtPrice" layoutX="256.0" layoutY="173.0" />
+      <TextField fx:id="txtAuthor" layoutX="40.0" layoutY="232.0" />
+      <TextField fx:id="txtNPages" layoutX="256.0" layoutY="232.0" />
+      <TextField fx:id="txtEditorial" layoutX="426.0" layoutY="173.0" prefHeight="25.0" prefWidth="167.0" />
+      <TextField fx:id="txtYearOfPublication" layoutX="426.0" layoutY="232.0" prefHeight="25.0" prefWidth="167.0" />
+      <Label layoutX="40.0" layoutY="148.0" prefHeight="17.0" prefWidth="64.0" text="Title" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="40.0" layoutY="209.0" text="Author" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="256.0" layoutY="148.0" text="Price" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="256.0" layoutY="209.0" text="Number of Pages" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="426.0" layoutY="148.0" text="Editorial" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="426.0" layoutY="209.0" text="Year of Publication " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Button fx:id="btnSearch" layoutX="201.0" layoutY="167.0" mnemonicParsing="false" onAction="#search" prefHeight="19.0" prefWidth="30.0">
+         <effect>
+            <Glow level="0.23" />
+         </effect></Button>
+      <Label layoutX="216.0" layoutY="44.0" text="MY BOOKS" textAlignment="CENTER" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Comic Sans MS" size="64.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="113.0" fitWidth="93.0" layoutX="600.0" layoutY="33.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/NicePng_books-clipart-png_1212600.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="105.0" fitWidth="107.0" layoutX="72.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/read.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="317.0" fitWidth="149.0" layoutX="611.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Daco_4061728.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnRefresh" layoutX="615.0" layoutY="183.0" mnemonicParsing="false" onAction="#refresh" prefHeight="47.0" prefWidth="64.0" style="-fx-background-color: #007AC2;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
